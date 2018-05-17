@@ -15,5 +15,6 @@ namespace Maonot.Models
         public string LastName { get; set; }
         public string Password { get; set; }
         public EmailAddressAttribute Email { get; set; }
+        //test
     }
 }
