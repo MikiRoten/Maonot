@@ -56,36 +56,51 @@ namespace Maonot.Models
     }
     public class Registration
     {
+        [Required]
         public int ID { get; set; }
+        [Required]
         public int StundetId { get; set; }
+        [Required]
         public string LastName { get; set; }
+        [Required]
         public string FirstName { get; set; }
         public User User { get; set; }
+        [Required]
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         public DateTime Bday { get; set; }
+        [Required]
         public string City { get; set; }
+        [Required]
         public string Adress { get; set; }
         public int PostalCode { get; set; }
+        [Required]
         public string PhoneNumber { get; set; }
+        [Required]
         public FieldStudy? FieldOfStudy { get; set; }
+        [Required]
         public Year? SteadyYear { get; set; }
+        [Required]
         public Service? TypeOfService { get; set; }
+        [Required]
         public HealthCondition? HealthCondition { get; set; }
+        [Required]
         public Year? Seniority { get; set; }
+        [Required]
         public ApertmantType? ApertmantType { get; set; }
         // להוסיף אפשרות לצרף מסמכים לשדות חייל בודד, שרות צבאי, ומגבלות רפואיות
         // יש אפשרות לצרף מסמכי תעודת זהות של ההורים
         // יצירת טבלה דינמית שמאפשרת להוסיף הורים\אחים ולתת עליהם את הנתונים הרלוונטים
         public int PartnerID { get; set; }
-        public int PartnerLastName { get; set; }
-        public int PartnerFirstName { get; set; }
-        [DataType(DataType.Date)]
-        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
-        public DateTime PartnerBday { get; set; }
-        // אפשרות לצירוף מסמכים על בן\בת הזוג
-        // צרוף מסמכים על על הכנסת הורים
-        //צירוף מכתב אישי
+        public string PartnerLastName { get; set; }
+        public string PartnerFirstName { get; set; }
+       // [DataType(DataType.Date)]
+      //  [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
+        //public DateTime PartnerBday { get; set; }
+        public int PartnerAge { get; set; } 
+    // אפשרות לצירוף מסמכים על בן\בת הזוג
+    // צרוף מסמכים על על הכנסת הורים
+    //צירוף מכתב אישי
 
 
 
@@ -94,5 +109,5 @@ namespace Maonot.Models
 
 
 
-    }
+}
 }
