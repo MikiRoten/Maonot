@@ -75,7 +75,8 @@ namespace Maonot.Models
         public string Adress { get; set; }
         public int PostalCode { get; set; }
         [Required]
-        public string PhoneNumber { get; set; }
+        [RegularExpression(@"^0\d([\d]{0,1})([-]{0,1})\d{7}$", ErrorMessage= "Please Enter Correct Phone Number(9/10 digits")]
+        public string PhRegularExpressiononeNumber { get; set; }
         [Required]
         public FieldStudy? FieldOfStudy { get; set; }
         [Required]
