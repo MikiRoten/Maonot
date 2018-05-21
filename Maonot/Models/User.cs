@@ -10,11 +10,17 @@ namespace Maonot.Models
 {
     public class User
     {
+        [Required]
         public int StudentId { get; set; }
+        [Required]
         public string FirstName { get; set; }
+        [Required]
         public string LastName { get; set; }
+        [Required]
         public string Password { get; set; }
-        public EmailAddressAttribute Email { get; set; }
-        //test
+        [Required]
+        [RegularExpression(@"^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$",
+        ErrorMessage = "Please Enter Correct Email Address")]
+        public string Email { get; set; }
     }
 }
