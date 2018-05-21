@@ -11,6 +11,7 @@ namespace Maonot.Models
     public class User
     {
         [Required]
+        [RegularExpression(@"^\d{9}$",ErrorMessage = "Please Enter Correct ID")]
         public int StudentId { get; set; }
         [Required]
         public string FirstName { get; set; }
