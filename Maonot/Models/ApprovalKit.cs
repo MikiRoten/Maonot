@@ -31,16 +31,26 @@ namespace Maonot.Models
     }
     public class ApprovalKit
     {
+
         public int ID { get; set; }
+        [Required]
         public int StundetId { get; set; }
+        [Required]
         public string LastName { get; set; }
+        [Required]
         public string FirstName { get; set; }
+        
         public Registration Reg { get; set; }
         //public User User { get; set; }
+        [Required]
         public RoomType? RoomType { get; set; }
+        [Required]
         public Choose? LivingWithReligious { get; set; }
+        [Required]
         public Choose? LivingWithSmoker { get; set; }
+        [Required]
         public Religious? ReligiousType { get; set; }
+
         public string HealthCondition { get; set; }
         public int PartnerId1 { get; set; }
         public int PartnerId2 { get; set; }
