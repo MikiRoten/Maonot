@@ -13,10 +13,13 @@ namespace Maonot.Models
         
         public int MessageID { set; get; }
         [Required]
+        [Display(Name = "נמען")]
         public string Addressee { set; get; }
         [Required]
+        [Display(Name = "נושא הודעה")]
         public string Subject { set; get; }
         [Required]
+        [Display(Name = "תוכן הודעה")]
         public string Content { set; get; }
 
 

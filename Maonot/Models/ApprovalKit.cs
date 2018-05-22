@@ -34,27 +34,38 @@ namespace Maonot.Models
 
         public int ID { get; set; }
         [Required]
+        [Display(Name = "תעודת זהות")]
         public int StundetId { get; set; }
         [Required]
+        [Display(Name = "שם משפחה")]
         public string LastName { get; set; }
         [Required]
+        [Display(Name = "שם פרטי")]
         public string FirstName { get; set; }
         
         public Registration Reg { get; set; }
         //public User User { get; set; }
         [Required]
+        [Display(Name = "סוג חדר")]
         public RoomType? RoomType { get; set; }
         [Required]
+        [Display(Name = "מגורים עם סטודנט/ית דתי/ה")]
         public Choose? LivingWithReligious { get; set; }
         [Required]
+        [Display(Name = "מגורים עם סטודנט/ית מעשנ/ת")]
         public Choose? LivingWithSmoker { get; set; }
         [Required]
+        [Display(Name = "מעוניין במגורים עם סטודנט/ית")]
         public Religious? ReligiousType { get; set; }
-
-        public string HealthCondition { get; set; }
+        [Display(Name = "מגבלות רפואיות")]
+        public HealthCondition? HealthCondition { get; set; }
+        [Display(Name = "העדפה לשותף 1")]
         public int PartnerId1 { get; set; }
+        [Display(Name = "העדפה לשותף 2")]
         public int PartnerId2 { get; set; }
+        [Display(Name = "העדפה לשותף 3")]
         public int PartnerId3 { get; set; }
+        [Display(Name = "העדפה לשותף 4")]
         public int PartnerId4 { get; set; }
 
         //הוספת אופציית העלאת נתונים
